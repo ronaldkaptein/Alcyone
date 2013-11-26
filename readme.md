@@ -5,6 +5,9 @@
 Alcyone is a very basic content managing system for generating websites, based
 on markdown. 
 
+For a simple demo of alcyone in action, see
+[here](http://ronaldk.nl/alcyone_demo).
+
 Two steps to generate a website:
 
 ## 1
