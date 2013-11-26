@@ -1,3 +1,7 @@
+# Alcyone
+
+## A simple php and Markdown based tool for creating websites
+
 Alcyone is a very basic content managing system for generating websites, based
 on markdown. 
 
