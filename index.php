@@ -50,7 +50,7 @@ else
 
 <div id="container">
 <div id="header">
-   <a href="/"><?php echo $sitemaintitle ?></a>
+   <a href="index.php"><?php echo $sitemaintitle ?></a>
 </div>
    <div id="menu">
       <!--Make menu of static pages-->
