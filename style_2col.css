@@ -1,0 +1,132 @@
+html, body{
+	background:#FFF;
+	color:#000;
+	font: 16px "helvetica","arial";
+}
+
+#container{
+	width: 95%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#header{
+   width: 100%;
+   float: left;
+	height: 50px;
+	text-align: center;
+   margin-top: 10px;
+   margin-bottom: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 32px;
+}
+
+#menu{
+   float: left;
+   width: 25%;
+   font-size: 22px;
+}
+
+#content{
+   clear: right;
+   float: right;
+   width: 70%;
+   padding-left: 2%;
+   padding-right: 2%;
+   min-height: 70% !important;
+   
+}
+
+#footer{
+   clear: both;
+   float: left;
+	height: 30px;
+   width: 100%;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+	text-align: center;
+	font-size: 16px;
+}
+
+h1 {
+   font-size: 26px;
+   margin-bottom: 30px;
+   /*text-align: center;*/
+   font-weight: bold;
+}
+h2 {
+   font-size: 18px;
+   margin-top: 30px;
+   margin-bottom: 20px;
+   font-weight: bold;
+}
+
+a, a:visited {
+	color: #F44;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a:hover{
+	color: #000;
+}
+
+a img{
+border:0;
+}
+
+.staticlist ul
+{
+  list-style: none;
+  font-size: 44px;
+  text-align: center
+}
+.staticlist li:before {
+	content: "";
+}
+.staticlist li:first-child:before  {
+	content: "";
+}
+.staticlist li 
+{
+  list-style: none;
+	/*display: inline;*/
+   padding-right: 10px;
+   padding-left: 10px;
+}
+.staticlist li a:hover
+{
+   color: #000;
+}
+
+.postlist ul {
+  list-style: none;
+  font-size: 14px;
+}
+.postlist li:before {
+	content: "- ";
+   color: #000;
+}
+.postlist li 
+{
+  list-style: none;
+  color: #000;
+}
+.postlist li:hover
+{
+   color: #EEE;
+}
+
+.postnav a {
+   margin-top: 30px;
+   font-weight: bold;
+}
+
+.listsubheader {
+   /*margin-bottom: 15px;*/
+   /*padding-top: 20px;*/
+   font-size: 18px;
+}
