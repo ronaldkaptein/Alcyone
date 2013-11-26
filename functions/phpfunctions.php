@@ -202,7 +202,6 @@ function includemarkdown($file){
       $filename="$file.md";
    }
    $content=file("content/".$filename);
-   $contentb=array();
    $i=0;
    foreach ($content as $line) {
       #Remove metadata before first line break
@@ -218,10 +217,9 @@ function includemarkdown($file){
       }
       $i++;
    }
-   $contenthtml = markdown(implode($content));
+   $contenthtml = Markdown(implode($content));
 
-   //echo "$contenthtml";
-   foreach (explode("\n",$contenthtml) as $line) {
+   foreach (explode(" \n",$contenthtml) as $line) {
       if ( preg_match('/<?php (.*)\?>/',$line,$result))
       {
          eval($result[1].";");
