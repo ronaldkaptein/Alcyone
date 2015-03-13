@@ -38,7 +38,7 @@ else
 }  
 ?> 
 
-<title><? echo $pagetitle ?></title>
+<title><?php echo $pagetitle ?></title>
 <meta name="description" content="<?php echo $sitemaintitle ?>" >
 <meta name="keywords" content="<?php echo $sitemaintitle ?>" >
 <meta name="author" content="<?php echo $author ?>" >
