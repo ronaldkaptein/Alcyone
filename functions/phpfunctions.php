@@ -219,7 +219,7 @@ function includemarkdown($file){
    }
    $contenthtml = Markdown(implode($content));
 
-   foreach (explode(" \n",$contenthtml) as $line) {
+   foreach (explode("\n",$contenthtml) as $line) {
       if ( preg_match('/<?php (.*)\?>/',$line,$result))
       {
          eval($result[1].";");
