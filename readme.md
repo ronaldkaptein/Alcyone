@@ -2,27 +2,23 @@
 
 ## A minimalistic Markdown-based tool for creating websites
 
-Alcyone is a very basic content managing system for generating websites, based
-on markdown. Static pages and (blog) posts can be written in Markdown, uploaded, 
-and they are then automatically added to the site. Very minimal but functional. 
+Alcyone is a very basic content managing system for generating websites, based on markdown. Static pages and (blog) posts can be written in Markdown, uploaded, and they are then automatically added to the site. Very minimal but functional. 
 
-For a simple demo of alcyone in action, see
-[here](http://ronaldkaptein.nl/alcyone_demo).
+For a simple demo of alcyone in action, see [here](http://ronaldkaptein.nl/alcyone_demo).
 
-Two steps to generate a website:
+To generate a website:
 
-## 1
+Add basic info for the website to the file `content/siteconfig.md`. Currently supported data is:
 
-Add basic info such as author and website title to the top op `index.php`.
-
-## 2
+- `author`: Used in footer
+- `sitetitle`: Title for website. Also used for header
 
 Add content to the directory `/content/`. All content must be written in
 [markdown](http://daringfireball.net/projects/markdown/) (extension .md). A
 small header with custom fields determines how the content is shown. Syntax of
 the header is key: value.
 
-- `type`: "post" or "static".
+- `type`: "post" for a blog post, "static" for a static page, "hidden" for a hidden page.
 - `title`: title of the post/static page
 - `date`: date of a post, in format yyyy-mm-dd, e.g. 2013-11-23. Is ignored for
   static pages
@@ -31,11 +27,11 @@ the header is key: value.
 Some examples files are already present in `/content/`
 
 By default, the newest post is shown on the home page. This can be changed in
-`index.php`. 
+`index.php` if wanted. 
 
 ## Styling
 
-The style of the website can be changed using css.
+The style of the website can be changed by editing style.css. 
 
 ## Advanced
 
@@ -55,6 +51,8 @@ should be given in format "key",value:
 
 `includepagelist` also returns the name of the page that is sorted first, e.g.
 the newest posts when sorted by date. 
+
+The example file `blog.md` contains an example of how to generate a list of all blog posts.
 
 See the top of `phpfunctions.php` for more info.
 
