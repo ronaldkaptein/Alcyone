@@ -11,13 +11,13 @@ http://www.gnu.org/licenses/gpl.html
 <head>
 
 <?php
-//Begin user settings
-$author="John Doe";
-$sitemaintitle="example.com";
-$footertext="All &copy; ".$author;
-//End user settings
 
 include_once 'functions/phpfunctions.php';
+
+//Get user settings
+$author=get_metadata("siteconfig.md","author");
+$sitemaintitle=get_metadata("siteconfig.md","sitetitle");
+$footertext="All &copy; ".$author;
 
 //Get page from argument ?q=pagename
 if (!isset($_GET['q'])) //argument q is not passed
@@ -44,6 +44,7 @@ else
 <meta name="author" content="<?php echo $author ?>" >
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" >
 <link rel="stylesheet" type="text/css" href="style.css" title="style" >
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -69,6 +70,7 @@ else
 
       //show navigation to next/previous post if type is post
       $type=get_metadata($file,"type");
+
       if (strcmp($type,"post") == 0)
       {
       postnavigation($file);
