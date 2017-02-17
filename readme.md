@@ -35,9 +35,7 @@ By default, the newest post is shown on the home page. This can be changed in
 
 ## Styling
 
-The style of the website can be changed using css. Two css functions are
-included, `style_1col.css` for a 1-column layout (menu on top), and `style_2col.css` for two
-columns (menu on the left). The used style can be changed in index.php. 
+The style of the website can be changed using css.
 
 ## Advanced
 
