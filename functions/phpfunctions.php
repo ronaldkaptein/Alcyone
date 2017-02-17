@@ -12,6 +12,7 @@ function includepagelist($typetoinclude)
    $includehomelink=0;
    $homelink="";
    $homelinktext="home";
+   $includedate=0;
 
    if ($typetoinclude === "posts"){
       $typetoinclude = "post";}
@@ -48,6 +49,9 @@ function includepagelist($typetoinclude)
          case 'includehomelink':
             $includehomelink=$theargs[$i+1];
             break;
+	     case 'includedate':
+			$includedate=$theargs[$i+1];
+			break;
          case 'homelink':
             $homelink=$theargs[$i+1];
             break;
@@ -74,6 +78,7 @@ function includepagelist($typetoinclude)
             $thetype=get_metadata($thefile,"type");
             $theorder=get_metadata($thefile,"order");
             $thedate=get_metadata($thefile,"date");
+
             if (strcmp($thetype,$typetoinclude) == 0 ) {
                $file[$i]=$thefile;
                $content[$i]=$thecontent;
@@ -115,16 +120,26 @@ function includepagelist($typetoinclude)
       $end=$N+$OFFSET;
    }
 
+   $datepostfix="";
+   if ($includedate == 1)
+   {
+     $datepostfix=" (".$date[$i].") ";
+   }
+
    if ( $print == 1)
    {
       echo "<ul class=\"$cssclass\">\n";
       for ($i=$OFFSET; $i<$end; $i++)
       {
+		if ($includedate == 1)
+        {
+           $datepostfix=" (".$date[$i].") ";
+        }
          if ($yearheaders == 1 && ($i==$OFFSET || $year[$i] != $year[$i-1]))
          {
             echo '<div class="listsubheader">'.$year[$i].'</div>';
          }
-         echo "<li><a href=\"index.php?q=".$file[$i]."\">".$title[$i]."</a></li><!--\n-->";
+         echo "<li><a href=\"index.php?q=".$file[$i]."\">".$title[$i]."</a><span //class=\"datepostfix\">".$datepostfix."</span></li>";
       }
       echo "</ul>\n";
    }
