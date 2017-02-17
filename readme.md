@@ -1,12 +1,13 @@
 # Alcyone
 
-## A simple php and Markdown based tool for creating websites
+## A minimalistic Markdown-based tool for creating websites
 
 Alcyone is a very basic content managing system for generating websites, based
-on markdown. 
+on markdown. Static pages and (blog) posts can be written in Markdown, uploaded, 
+and they are then automatically added to the site. Very minimal but functional. 
 
 For a simple demo of alcyone in action, see
-[here](http://ronaldk.nl/alcyone_demo).
+[here](http://ronaldkaptein.nl/alcyone_demo).
 
 Two steps to generate a website:
 
@@ -21,7 +22,7 @@ Add content to the directory `/content/`. All content must be written in
 small header with custom fields determines how the content is shown. Syntax of
 the header is key: value.
 
-- `type`: post or static.
+- `type`: "post" or "static".
 - `title`: title of the post/static page
 - `date`: date of a post, in format yyyy-mm-dd, e.g. 2013-11-23. Is ignored for
   static pages
@@ -35,8 +36,8 @@ By default, the newest post is shown on the home page. This can be changed in
 ## Styling
 
 The style of the website can be changed using css. Two css functions are
-included, `style_1col.css` for a 1-column layout, and `style_2col.css` for two
-columns. 
+included, `style_1col.css` for a 1-column layout (menu on top), and `style_2col.css` for two
+columns (menu on the left). The used style can be changed in index.php. 
 
 ## Advanced
 
