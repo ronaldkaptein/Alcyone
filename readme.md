@@ -57,3 +57,7 @@ should be given in format "key",value:
 the newest posts when sorted by date. 
 
 See the top of `phpfunctions.php` for more info.
+
+## To do
+
+See [todo.md](todo.md) for a list of things I may implement in the future
