@@ -13,6 +13,8 @@ Add basic info for the website to the file `content/siteconfig.md`. Currently su
 - `author`: Used in footer
 - `sitetitle`: Title for website. Also used for header
 
+Note that this file should have `type: hidden` on top, otherwise it may appear on the site.
+
 Add content to the directory `/content/`. All content must be written in
 [markdown](http://daringfireball.net/projects/markdown/) (extension .md). A
 small header with custom fields determines how the content is shown. Syntax of
