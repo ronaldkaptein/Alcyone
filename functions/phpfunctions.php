@@ -74,8 +74,7 @@ function includepagelist($typetoinclude)
             $thetype=get_metadata($thefile,"type");
             $theorder=get_metadata($thefile,"order");
             $thedate=get_metadata($thefile,"date");
-
-            if ( strcmp($thetype,$typetoinclude) == 0 ) {
+            if (strcmp($thetype,$typetoinclude) == 0 ) {
                $file[$i]=$thefile;
                $content[$i]=$thecontent;
                $order[$i]=$theorder;
@@ -254,8 +253,9 @@ function get_metadata($file,$tag){
          $expression="/^".$tag.":.*/";
          if ( preg_match($expression,$line))
          {
-            $expression="/^".$tag.": *(.*)/";
+            $expression="/^".$tag.":*(.*)/";
             preg_match($expression,$line,$themetadata);
+			$themetadata[1]=trim($themetadata[1]);
             return $themetadata[1];
             break;
          }
