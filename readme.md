@@ -31,9 +31,17 @@ Some examples files are already present in `/content/`
 By default, the newest post is shown on the home page. This can be changed in
 `index.php` if wanted. 
 
+## Internal links
+
+Internal links can be used in the markdown file using the syntax "&#91;&#91;link text:filename.md&#93;&#93;". Where
+`filename.md` is an existing file in the `content` directory. The extension `.md` can be omitted if wanted, it is then
+added automatically. 
+
 ## Styling
 
-The style of the website can be changed by editing style.css. 
+If wanted, the style of the website can be changed by editing the file `user.css` in the `content` directory. There is also a file
+`alcyone.css` in the main directory, but it is advised not to edit this file, because it may be changed during an
+update, in which case user changes are lost. The user can override the settings in `alcyone.css` in `user.css`. 
 
 ## Advanced
 

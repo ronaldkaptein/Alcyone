@@ -27,7 +27,7 @@ function includepagelist($typetoinclude)
       for ($i=1; $i<$numargs; $i=$i+2) {
          switch ($theargs[$i]) {
          case 'offset':
-            case 'OFFSET';
+         case 'OFFSET';
             $OFFSET=$theargs[$i+1];
             break;
          case 'n':
@@ -49,9 +49,9 @@ function includepagelist($typetoinclude)
          case 'includehomelink':
             $includehomelink=$theargs[$i+1];
             break;
-	     case 'includedate':
-			$includedate=$theargs[$i+1];
-			break;
+         case 'includedate':
+            $includedate=$theargs[$i+1];
+            break;
          case 'homelink':
             $homelink=$theargs[$i+1];
             break;
@@ -123,7 +123,7 @@ function includepagelist($typetoinclude)
    $datepostfix="";
    if ($includedate == 1)
    {
-     $datepostfix=" (".$date[$i].") ";
+      $datepostfix=" (".$date[$i].") ";
    }
 
    if ( $print == 1)
@@ -131,10 +131,10 @@ function includepagelist($typetoinclude)
       echo "<ul class=\"$cssclass\">\n";
       for ($i=$OFFSET; $i<$end; $i++)
       {
-		if ($includedate == 1)
-        {
-           $datepostfix=" (".$date[$i].") ";
-        }
+         if ($includedate == 1)
+         {
+            $datepostfix=" (".$date[$i].") ";
+         }
          if ($yearheaders == 1 && ($i==$OFFSET || $year[$i] != $year[$i-1]))
          {
             echo '<div class="listsubheader">'.$year[$i].'</div>';
@@ -231,17 +231,30 @@ function includemarkdown($file){
       }
       $i++;
    }
+
    $contenthtml = Markdown(implode($content));
 
+   //Check for php statements and internal links
    foreach (explode("\n",$contenthtml) as $line) {
+      //Search for php and evaluate. Only one php statement per line allowed, and no other text, i.e. only php. Useful for e.g. function includepagelist
       if ( preg_match('/<?php (.*)\?>/',$line,$result))
       {
          eval($result[1].";");
+         return;
       }
-      else
+      //Search for [[ first before replacing, is faster
+      if (strpos($line,'[[') !== false)
       {
-         echo $line;
+         //format [[linkname:file.md]]
+         $line=preg_replace('/\[\[([^:]*)[:]([^:]*).md\]\]/',
+         '<a href="index.php?q=$2.md">$1</a>',
+         $line);
+         //format [[linkname:file]] (so without extension)
+         $line=preg_replace('/\[\[([^:]*)[:]([^:]*)\]\]/',
+         '<a href="index.php?q=$2.md">$1</a>',
+         $line);
       }
+      echo $line;
    }
 }
 
@@ -270,7 +283,7 @@ function get_metadata($file,$tag){
          {
             $expression="/^".$tag.":*(.*)/";
             preg_match($expression,$line,$themetadata);
-			$themetadata[1]=trim($themetadata[1]);
+            $themetadata[1]=trim($themetadata[1]);
             return $themetadata[1];
             break;
          }
