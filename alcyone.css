@@ -1,3 +1,18 @@
+/*
+This alcyone.css contains the advanced style settings
+for the site, as well as the default main settings
+such as font, color, etc.
+
+DON'T EDIT THIS FILE!
+
+Changing the style can be done in user.css. Settings
+in there override the settings given here.
+
+The advantage of this, is that when an update
+of alcyone is installed, alcyone.css can be easily 
+updated without overriding user changes.
+*/
+
 /*Basic settings, for color and font size*/
 
 html,

@@ -1,0 +1,44 @@
+/*
+Values in this file override the values in the
+main style file alcyone.css.
+
+Changing the style should always be done using
+this file, alcyone.css should not be edited. 
+
+The advantage of this, is that when an update
+of alcyone is installed, alcyone.css can be easily 
+updated without overriding user changes.
+
+/*Basic settings, for color and font size*/
+
+html,
+body {
+   background: #FFF;
+   color: #000;
+   font-family: "helvetica", "arial";
+   font-size: 18px;
+}
+
+h1 {
+   font-size: 26px;
+   font-weight: bold;
+}
+
+h2 {
+   font-size: 18px;
+   font-weight: bold;
+}
+
+h4 { /*Used for date below post header*/
+   font-size: 18px;
+   font-weight: normal;
+}
+
+a,
+a:visited {
+   color: #F44;
+}
+
+a:hover {
+   color: #000;
+}

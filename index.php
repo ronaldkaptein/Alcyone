@@ -43,7 +43,8 @@ else
 <meta name="keywords" content="<?php echo $sitemaintitle ?>" >
 <meta name="author" content="<?php echo $author ?>" >
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" >
-<link rel="stylesheet" type="text/css" href="style.css" title="style" >
+<link rel="stylesheet" type="text/css" href="alcyone.css" title="style" >
+<link rel="stylesheet" type="text/css" href="content/user.css" title="style" >
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
