@@ -16,7 +16,7 @@ include_once 'functions/phpfunctions.php';
 //Get user settings
 $author=get_metadata("siteconfig.md","author");
 $sitemaintitle=get_metadata("siteconfig.md","sitetitle");
-$footertext="All &copy; ".$author;
+$footertext="&copy; ".$author;
 
 //Get page from argument ?q=pagename
 if (!isset($_GET['q'])) //argument q is not passed
