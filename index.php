@@ -1,7 +1,7 @@
 <!--
 alcyone - A simple php and Markdown based tool for creating websites
 
-Copyright 2013  Ronald Kaptein
+Copyright 2013-2017  Ronald Kaptein
 <https://bitbucket.org/ronaldk/alcyone>
 
 alcyone is released under the terms of the GNU General Public License, version
@@ -9,7 +9,6 @@ alcyone is released under the terms of the GNU General Public License, version
 http://www.gnu.org/licenses/gpl.html
 -->
 <head>
-
 <?php
 
 include_once 'functions/phpfunctions.php';
@@ -36,7 +35,7 @@ else
    $thefile=""; 
    $pagetitle=$sitemaintitle;
 }  
-?> 
+?>
 
 <title><?php echo $pagetitle ?></title>
 <meta name="description" content="<?php echo $sitemaintitle ?>" >
@@ -46,6 +45,8 @@ else
 <link rel="stylesheet" type="text/css" href="alcyone.css" title="style" >
 <link rel="stylesheet" type="text/css" href="content/user.css" title="style" >
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php include_once 'content/user_header.html'; ?>
+
 </head>
 
 <body>
