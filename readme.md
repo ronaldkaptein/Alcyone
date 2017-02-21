@@ -43,7 +43,9 @@ added automatically.
 
 If wanted, the style of the website can be changed by editing the file `user.css` in the `content` directory. There is also a file
 `alcyone.css` in the main directory, but it is advised not to edit this file, because it may be changed during an
-update, in which case user changes are lost. The user can override the settings in `alcyone.css` in `user.css`. 
+update, in which case user changes are lost. The user can override the settings in `alcyone.css` in `user.css`. For
+changes to the style on mobile displays onle, user_mobile.css should be used, overriding the default settings in
+alcyone_mobile.css
 
 ## Advanced
 
