@@ -1,0 +1,53 @@
+/*
+This alcyone_mobile.css contains the advanced style settings
+for the site for mobile screens, as well as the default main settings
+such as font, color, etc.
+
+These settings are in addition to the main style file alcyone.css, or 
+override them if they are already present.
+
+DON'T EDIT THIS FILE
+
+Changing this default style for mobile screens can be done in
+user_mobile.css 
+*/
+
+@media screen and (max-width: 1024px) {
+
+
+   #container {
+      width: 320px;
+      font-size: 14px;
+   }
+
+   #header {
+      height: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 24px;
+   }
+
+   #menu {
+      height: 50px;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      font-size: 18px;
+   }
+   
+   h1{
+     font-size: 22px;
+   }
+   
+   h2,h3,h4{
+     font-size: 14px;
+   }
+
+}
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+   #container {
+      width: 500px;
+   }
+}

@@ -1,0 +1,25 @@
+/*
+Values in this file override the values in the
+main style files alcyone_mobile and alcyone.css.
+
+Changing the mobile style should always be done using
+this file, alcyone_mobile.css and alcyone.css should
+not be edited. 
+
+The advantage of this, is that when an update
+of alcyone is installed, alcyone.css and alcyone_mobile.css
+can be easily updated without overriding user changes.
+
+Since this is file mobile, all declarations should be between
+@media tags, which specify the mobile screen sizes. Elements outside these
+tags are applied to the desktop site as well, but user.css should be 
+used for that. 
+
+/*Basic settings, for color and font size*/
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+
+}
