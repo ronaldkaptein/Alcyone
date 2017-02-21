@@ -47,6 +47,8 @@ update, in which case user changes are lost. The user can override the settings 
 
 ## Advanced
 
+
+### Including page or post list
 Post lists and static page menus are generated using the php-function
 `includepagelist`, which lives in `/functions/phpfunctions.php`. This function
 needs one obligatory argument, namely the type of page to show (e.g. `posts` or
@@ -67,6 +69,10 @@ the newest posts when sorted by date.
 The example file `blog.md` contains an example of how to generate a list of all blog posts.
 
 See the top of `phpfunctions.php` for more info.
+
+### Including extra header
+
+Extra content can be added to the header of `index.php`. This can be useful for e.g. including Google fonts, or for adding tracking code for web analytics. This can be done by creating a file `user_header.html` with the extra content in the `content` directory. This file should not contain `<header>` tags, only the text to be added to the default header. 
 
 ## To do
 
