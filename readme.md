@@ -6,6 +6,8 @@ Alcyone is a very basic content managing system for generating websites, based o
 
 For a simple demo of alcyone in action, see [here](http://ronaldkaptein.nl/alcyone_demo).
 
+## Setup
+
 To generate a website:
 
 Add basic info for the website to the file `content/siteconfig.md`. Currently supported data is:
