@@ -85,7 +85,7 @@ body {
 
 #content {
    width: 90%;
-   margin-top: 50px;
+   margin-top: 75px;
    margin-left: auto;
    margin-right: auto;
    min-height: 400px;
@@ -118,6 +118,7 @@ h4 { /*Used for date below post header*/
    margin-top: -10px;
    margin-bottom: 30px;
    text-align: center;
+   font-size: 10px;
 }
 
 a,
@@ -176,7 +177,7 @@ li {
 }
 
 .datepostfix {
-   font-size: 0.8rem;
+   font-size: 0.8em;
 }
 
 img {
