@@ -232,6 +232,9 @@ function includemarkdown($file){
       $i++;
    }
 
+   //Turn the main header (H1) into a link:
+   $content=preg_replace('/^#[ ](.*)/','# [[\1:'.$filename.']]',$content);
+
    $contenthtml = Markdown(implode($content));
 
    //Check for php statements and internal links
