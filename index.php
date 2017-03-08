@@ -64,9 +64,17 @@ else
 
    <div id="content">
       <?php
-      //If no file specified, show newest post:
-      if (empty($file)){
-         $file=includepagelist("post","print",0);
+      //If no file specified, show startpage.md, or, if not present, the newest post:
+      if (empty($file))
+      {
+         if (is_file("content/startpage.md"))
+         {
+           $file="startpage.md";
+         }
+         else
+         {
+           $file=includepagelist("post","print",0);
+         }
       }
 
       //Include the content:

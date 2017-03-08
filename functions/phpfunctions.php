@@ -8,6 +8,7 @@ function includepagelist($typetoinclude)
    $sortkey="date";
    $cssclass="staticlist";
    $yearheaders=0;
+   $monthheaders=0;
    $print=1;
    $includehomelink=0;
    $homelink="";
@@ -42,6 +43,9 @@ function includepagelist($typetoinclude)
             break;
          case 'yearheaders':
             $yearheaders=$theargs[$i+1];
+            break;
+         case 'monthheaders':
+            $monthheaders=$theargs[$i+1];
             break;
          case 'print':
             $print=$theargs[$i+1];
@@ -86,6 +90,7 @@ function includepagelist($typetoinclude)
                $title[$i]=$thetitle;
                $date[$i]=$thedate;
                $year[$i]=substr($thedate,0,4);
+               $month[$i]=substr($thedate,6,2);
                $i++;
             }
          }
@@ -100,15 +105,16 @@ function includepagelist($typetoinclude)
       $date[$i+1]="9999-99-99";
       $title[$i+1]=$homelinktext;
       $year[$i+1]="9999";
+      $month[$i+1]="9999";
       $content[$i+1]="";
       $noffiles++;
    }
 
    if (strcmp($sortkey,"date") == 0) {
-      array_multisort($date,SORT_DESC,$content,$title,$file,$year);
+      array_multisort($date,SORT_DESC,$content,$title,$file,$year,$month);
    }
    elseif (strcmp($sortkey,"order") == 0) {
-      array_multisort($order,$content,$title,$file,$year);
+      array_multisort($order,$content,$title,$file,$year,$month);
    }
 
    if ($N == 0 | $N > $noffiles | $N+$OFFSET>$noffiles) 
@@ -138,6 +144,10 @@ function includepagelist($typetoinclude)
          if ($yearheaders == 1 && ($i==$OFFSET || $year[$i] != $year[$i-1]))
          {
             echo '<div class="listsubheader">'.$year[$i].'</div>';
+         }
+         if ($monthheaders == 1 && ($i==$OFFSET || $month[$i] != $month[$i-1]))
+         {
+            echo '<div class="listsubheader">'.$month[$i].'</div>';
          }
          echo "<li><a href=\"index.php?q=".$file[$i]."\">".$title[$i]."</a><span //class=\"datepostfix\">".$datepostfix."</span></li>";
       }

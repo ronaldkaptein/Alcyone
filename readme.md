@@ -26,12 +26,11 @@ the header is key: value.
 - `title`: title of the post/static page
 - `date`: date of a post, in format yyyy-mm-dd, e.g. 2013-11-23. Is ignored for
   static pages
-- `order`: allows for manual sorting of posts/static pages in a list  
+- `order`: allows for manual sorting of posts/static pages in a list
 
 Some examples files are already present in `/content/`
 
-By default, the newest post is shown on the home page. This can be changed in
-`index.php` if wanted. 
+By default, the file `content/startpage.md` is shown on the home page. If this file is not present, the newest post is shown. In the header of `startpage.md`, `type` should probably be set to `hidden`, or otherwise it will appear in the main menu.
 
 ## Internal links
 
@@ -49,7 +48,6 @@ alcyone_mobile.css
 
 ## Advanced
 
-
 ### Including page or post list
 Post lists and static page menus are generated using the php-function
 `includepagelist`, which lives in `/functions/phpfunctions.php`. This function
@@ -62,7 +60,7 @@ should be given in format "key",value:
 - `yearheaders`: use year subheaders in post list (default 0)
 - `print`: print output (default 1)
 - `includehomelink`: include link to home in static page menu (default 0)
-- `homelink`: link to home (default `\`)
+- `homelink`: link to home (default `\\`)
 - `homelinktext`: text for home link (default "home")
 
 `includepagelist` also returns the name of the page that is sorted first, e.g.
